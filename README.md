@@ -267,3 +267,5 @@ cd warbunny
 python warbunny.py
 ```
 # Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Iankulani/warbunny&type=Date)](https://star-history.com/#Iankulani/warbunny&Date)
