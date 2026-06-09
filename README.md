@@ -25,16 +25,16 @@ Unified Multi-Channel Operations
 
 One of WarBunny’s core capabilities is its multi-channel command architecture. Users can interact with approved workflows through a variety of communication platforms without needing to switch between multiple security consoles.
 
-Supported interfaces include:
+# Supported interfaces include:
 
-Discord integrations
-Slack integrations
-Telegram integrations
-iMessage-compatible integrations
-Browser-based web application
-API-driven automation interfaces
-Team collaboration dashboards
-Mobile-friendly access experiences
+* Discord integrations
+* Slack integrations
+* Telegram integrations
+* iMessage-compatible integrations
+* Browser-based web application
+* API-driven automation interfaces
+* Team collaboration dashboards
+* Mobile-friendly access experiences
 
 This multi-channel approach allows teams to maintain operational continuity regardless of where they are working. Security analysts can launch authorized workflows from Slack, incident responders can receive updates through Telegram, instructors can manage training exercises from Discord, and administrators can monitor activities through the centralized web dashboard.
 
