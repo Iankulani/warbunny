@@ -4,3 +4,15 @@
 
 
 War bunny
+
+# How to clone the repo
+```bash
+git clone https://github.com/Iankulani/warbunny.git
+cd warbunny
+```
+
+
+ # How to run 
+ ```bash
+python warbunny.py
+```
