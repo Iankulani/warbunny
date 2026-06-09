@@ -44,7 +44,7 @@ Security Operations Coordination
 
 WarBunny provides a centralized framework for coordinating cybersecurity operations. Security teams can manage workflows, assign tasks, monitor activity, and maintain visibility across multiple environments from a single operational platform.
 
-Key operational capabilities include:
+# Key operational capabilities include:
 
 Workflow orchestration
 Team coordination
@@ -63,18 +63,18 @@ Cyber Drill and Training Environment
 
 Organizations increasingly rely on cyber drills and simulation exercises to assess readiness and improve response capabilities. WarBunny includes features specifically designed to support structured cybersecurity exercises.
 
-Training and drill capabilities include:
+# Training and drill capabilities include:
 
-Cyber range integration support
-Tabletop exercise coordination
-Incident simulation workflows
-Response training scenarios
-Security awareness exercises
-Crisis communication simulations
-Team readiness assessments
-Skill validation programs
-Exercise scoring and reporting
-Performance analytics
+* Cyber range integration support
+* Tabletop exercise coordination
+* Incident simulation workflows
+* Response training scenarios
+* Security awareness exercises
+* Crisis communication simulations
+* Team readiness assessments
+* Skill validation programs
+* Exercise scoring and reporting
+* Performance analytics
 
 These capabilities help organizations evaluate how personnel respond during simulated incidents while providing measurable insights that can be used to improve preparedness.
 
@@ -82,18 +82,18 @@ Red Team and Blue Team Collaboration
 
 WarBunny supports authorized security assessments by enabling collaboration between red teams, blue teams, purple teams, and security leadership.
 
-The platform facilitates:
+# The platform facilitates:
 
-Exercise coordination
-Scenario management
-Objective tracking
-Evidence management
-Activity documentation
-Lessons-learned reporting
-Team communication
-Exercise oversight
-Compliance monitoring
-Risk assessment activities
+* Exercise coordination
+* Scenario management
+* Objective tracking
+* Evidence management
+* Activity documentation
+* Lessons-learned reporting
+* Team communication
+* Exercise oversight
+* Compliance monitoring
+* Risk assessment activities
 
 By providing structured workflows and centralized visibility, WarBunny helps ensure that authorized security testing activities remain organized, documented, and aligned with organizational objectives.
 
