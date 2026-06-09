@@ -2,6 +2,18 @@
 
 <img width="1536" height="1024" alt="warbunny" src="https://github.com/user-attachments/assets/10dc0dcf-2796-4748-a621-5ef6c84dda8a" />
 
+[![GitHub stars](https://img.shields.io/github/stars/Iankulani/warbunny?style=for-the-badge&logo=github)](https://github.com/Iankulani/warbunny/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Iankulani/warbunny?style=for-the-badge&logo=github)](https://github.com/Iankulani/warbunny/network)
+[![GitHub watchers](https://img.shields.io/github/watchers/Iankulani/warbunny?style=for-the-badge&logo=github)](https://github.com/Iankulani/warbunny/watchers)
+[![GitHub contributors](https://img.shields.io/github/contributors/Iankulani/warbunny?style=for-the-badge&logo=github)](https://github.com/Iankulani/warbunny/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Iankulani/warbunny?style=for-the-badge&logo=git)](https://github.com/Iankulani/warbunny/commits/main)
+[![Version](https://img.shields.io/badge/version-v0.1.0-blue?style=for-the-badge&logo=github)](https://github.com/Iankulani/warbunny)
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20Android-blue?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/Iankulani/warbunny)
+[![Python](https://img.shields.io/badge/python-3.8%2B-yellow?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Discord](https://img.shields.io/badge/Discord-Support-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite-link) <!-- Replace with actual Discord invite -->
+[![Telegram](https://img.shields.io/badge/Telegram-Community-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/your_telegram_link) <!-- Replace with actual Telegram invite -->
+[![Slack](https://img.shields.io/badge/Slack-Join-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://join.slack.com/t/your-workspace/shared_invite/...) <!-- Replace with actual Slack invite -->
 
 WarBunny is a modern cybersecurity operations, simulation, and training platform designed to help security teams coordinate, automate, and manage authorized security activities across multiple communication channels and environments. Built for security professionals, educators, researchers, students, blue teams, red teams, and incident response personnel, WarBunny provides a centralized command experience that enables users to interact with security workflows through familiar collaboration platforms such as Discord, Slack, Telegram, iMessage-compatible integrations, and a dedicated web application.
 
