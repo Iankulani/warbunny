@@ -120,18 +120,18 @@ Advanced Automation Framework
 
 Modern security operations often require automation to improve efficiency and reduce repetitive work. WarBunny includes an automation framework that enables organizations to streamline approved operational tasks.
 
-Automation capabilities include:
+# Automation capabilities include:
 
-Scheduled workflows
-Event-triggered actions
-Alert routing
-Notification automation
-Report generation
-Asset tracking workflows
-Incident lifecycle management
-Data collection support
-Investigation workflows
-Administrative automation
+* Scheduled workflows
+* Event-triggered actions
+* Alert routing
+* Notification automation
+* Report generation
+* Asset tracking workflows
+* Incident lifecycle management
+* Data collection support
+* Investigation workflows
+* Administrative automation
 
 The automation framework is designed to reduce operational overhead while maintaining visibility and control.
 
