@@ -1,0 +1,57 @@
+# WARBUNNY Kubernetes ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: warbunny-config
+  namespace: security
+  labels:
+    app: warbunny
+data:
+  environment: "production"
+  log_level: "INFO"
+  db_host: "postgres.warbunny-db.svc.cluster.local"
+  db_port: "5432"
+  db_name: "warbunny"
+  redis_host: "redis.warbunny-redis.svc.cluster.local"
+  redis_port: "6379"
+  
+  # WARBUNNY Configuration
+  config.json: |
+    {
+      "version": "2.0.0",
+      "auto_start": false,
+      "auto_block_enabled": true,
+      "auto_block_threshold": 5,
+      "scan_timeout": 30,
+      "report_format": "html",
+      "generate_graphics": true,
+      "web": {
+        "enabled": true,
+        "port": 5000,
+        "host": "0.0.0.0",
+        "require_auth": true
+      },
+      "monitoring": {
+        "enabled": true,
+        "port_scan_threshold": 10,
+        "syn_flood_threshold": 100,
+        "http_flood_threshold": 200
+      },
+      "traffic_generation": {
+        "enabled": true,
+        "max_duration": 300,
+        "max_packet_rate": 1000,
+        "allow_floods": false
+      },
+      "social_engineering": {
+        "enabled": true,
+        "default_port": 8080,
+        "capture_credentials": true,
+        "auto_shorten_urls": true
+      },
+      "ssh": {
+        "enabled": true,
+        "default_timeout": 30,
+        "max_connections": 5
+      }
+    }

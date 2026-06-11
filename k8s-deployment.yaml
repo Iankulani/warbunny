@@ -1,0 +1,142 @@
+# WARBUNNY Kubernetes Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: warbunny
+  namespace: security
+  labels:
+    app: warbunny
+    version: v2.0.0
+    tier: backend
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: warbunny
+  template:
+    metadata:
+      labels:
+        app: warbunny
+        version: v2.0.0
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "5000"
+    spec:
+      serviceAccountName: warbunny
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+      containers:
+      - name: warbunny
+        image: warbunny:2.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+          name: web
+          protocol: TCP
+        - containerPort: 8080
+          name: phishing
+          protocol: TCP
+        env:
+        - name: WARBUNNY_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: warbunny-config
+              key: environment
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: warbunny-config
+              key: db_host
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: warbunny-secret
+              key: db_password
+        - name: DISCORD_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: warbunny-secret
+              key: discord_token
+              optional: true
+        - name: SLACK_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: warbunny-secret
+              key: slack_token
+              optional: true
+        - name: TELEGRAM_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: warbunny-secret
+              key: telegram_token
+              optional: true
+        securityContext:
+          capabilities:
+            add:
+            - NET_ADMIN
+            - NET_RAW
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+        volumeMounts:
+        - name: config
+          mountPath: /opt/warbunny/.warbunny
+        - name: logs
+          mountPath: /var/log/warbunny
+        - name: reports
+          mountPath: /opt/warbunny/warbunny_reports
+      volumes:
+      - name: config
+        persistentVolumeClaim:
+          claimName: warbunny-config-pvc
+      - name: logs
+        persistentVolumeClaim:
+          claimName: warbunny-logs-pvc
+      - name: reports
+        persistentVolumeClaim:
+          claimName: warbunny-reports-pvc
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - warbunny
+              topologyKey: kubernetes.io/hostname
+      tolerations:
+      - key: "security"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"

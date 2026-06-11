@@ -1,0 +1,128 @@
+version: '3.8'
+
+services:
+  warbunny:
+    build: .
+    image: warbunny:2.0.0
+    container_name: warbunny
+    restart: unless-stopped
+    
+    # Network configuration
+    network_mode: host  # For full network access
+    # Or use bridge mode with explicit ports:
+    # ports:
+    #   - "5000:5000"   # Web dashboard
+    #   - "8080:8080"   # Phishing server
+    
+    # Privileged mode for network features
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+    
+    # Environment variables
+    environment:
+      - WARBUNNY_ENV=production
+      - WARBUNNY_CONFIG=/opt/warbunny/.warbunny
+      - WARBUNNY_LOG_LEVEL=INFO
+      - TZ=UTC
+      - PYTHONUNBUFFERED=1
+    
+    # Volumes for persistence
+    volumes:
+      - warbunny_data:/opt/warbunny/.warbunny
+      - warbunny_logs:/var/log/warbunny
+      - warbunny_reports:/opt/warbunny/warbunny_reports
+      - /var/run/docker.sock:/var/run/docker.sock:ro  # Optional: for Docker monitoring
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "python3", "/opt/warbunny/healthcheck.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # Optional: PostgreSQL for production database
+  postgres:
+    image: postgres:15
+    container_name: warbunny-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: warbunny
+      POSTGRES_USER: warbunny
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-warbunny_secure_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - warbunny-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U warbunny"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Optional: Redis for caching and sessions
+  redis:
+    image: redis:7-alpine
+    container_name: warbunny-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - warbunny-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Optional: Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: warbunny-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - warbunny
+    networks:
+      - warbunny-net
+
+networks:
+  warbunny-net:
+    driver: bridge
+
+volumes:
+  warbunny_data:
+  warbunny_logs:
+  warbunny_reports:
+  postgres_data:
+  redis_data:
