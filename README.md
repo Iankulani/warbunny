@@ -21,7 +21,7 @@ Organizations today face increasingly complex cybersecurity challenges. Security
 
 The platform is designed with flexibility, usability, and scalability in mind. Whether an organization is conducting cyber drills, tabletop exercises, security awareness programs, defensive assessments, incident response activities, threat intelligence research, or authorized red-team simulations, WarBunny provides a structured framework that simplifies collaboration while maintaining operational visibility and governance.
 
-Unified Multi-Channel Operations
+# Unified Multi-Channel Operations
 
 One of WarBunny’s core capabilities is its multi-channel command architecture. Users can interact with approved workflows through a variety of communication platforms without needing to switch between multiple security consoles.
 
@@ -101,7 +101,7 @@ Educational and Academic Use
 
 Cybersecurity education continues to play a critical role in developing future security professionals. WarBunny includes capabilities designed to support educational institutions, training providers, and cybersecurity students.
 
-Educational applications include:
+# Educational applications include:
 
 Classroom demonstrations
 Security labs
