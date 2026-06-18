@@ -46,16 +46,25 @@ WarBunny provides a centralized framework for coordinating cybersecurity operati
 
 # Key operational capabilities include:
 
-Workflow orchestration
-Team coordination
-Security task management
-Incident tracking
-Evidence collection support
-Activity logging
-Investigation support
-Notification management
-Reporting workflows
-Automation management
+* Workflow orchestration 
+
+* Team coordination
+ 
+* Security task management
+ 
+* Incident tracking
+ 
+* Evidence collection support
+ 
+* Activity logging
+  
+* Investigation support
+ 
+* Notification management
+ 
+* Reporting workflows
+ 
+* Automation management
 
 The platform helps organizations establish repeatable and auditable processes that improve operational consistency and support governance requirements.
 
@@ -158,7 +167,7 @@ Reporting and Analytics
 
 WarBunny includes comprehensive reporting and analytics capabilities that provide visibility into operational performance and training outcomes.
 
-Reporting features include:
+# Reporting features include:
 
 Executive dashboards
 Activity summaries
