@@ -112,20 +112,29 @@ Cybersecurity education continues to play a critical role in developing future s
 
 # Educational applications include:
 
-Classroom demonstrations
-Security labs
-Hands-on exercises
-Team competitions
-Capture-the-flag coordination
-Cybersecurity workshops
-Student training programs
-Research projects
-Security simulations
-Learning assessments
+* Classroom demonstrations
+
+* Security labs
+
+* Hands-on exercises
+
+* Team competitions
+
+* Capture-the-flag coordination
+
+* Cybersecurity workshops
+
+* Student training programs
+
+* Research projects
+
+* Security simulations
+
+* Learning assessments
 
 Students can gain experience with realistic operational workflows while learning the importance of ethics, governance, documentation, and responsible security practices.
 
-Advanced Automation Framework
+# Advanced Automation Framework
 
 Modern security operations often require automation to improve efficiency and reduce repetitive work. WarBunny includes an automation framework that enables organizations to streamline approved operational tasks.
 
@@ -148,12 +157,15 @@ Social Engineering Awareness and Training Toolkit
 
 Human behavior remains one of the most important aspects of cybersecurity. WarBunny includes a social engineering awareness and training toolkit designed to help organizations educate employees and improve security culture.
 
-The toolkit focuses on:
+# The toolkit focuses on:
 
-Awareness campaigns
-Training simulations
-Employee education
-Security culture improvement
+* Awareness campaigns
+ 
+* Training simulations
+
+* Employee education
+ 
+* Security culture improvement
 Risk measurement
 Training analytics
 Engagement tracking
@@ -169,54 +181,78 @@ WarBunny includes comprehensive reporting and analytics capabilities that provid
 
 # Reporting features include:
 
-Executive dashboards
-Activity summaries
-Exercise reports
-Incident metrics
-Team performance indicators
-Readiness assessments
-Compliance reporting
-Historical analysis
-Trend visualization
-Operational insights
+* Executive dashboards
 
-These reports help organizations make informed decisions and continuously improve their security programs.
+* Activity summaries
+ 
+* Exercise reports
+ 
+* Incident metrics
+ 
+* Team performance indicators
+ 
+* Readiness assessments
+ 
+* Compliance reporting
+ 
+* Historical analysis
 
-Governance and Compliance
+* Trend visualization
+ 
+* Operational insights
+
+* These reports help organizations make informed decisions and continuously improve their security programs.
+
+* Governance and Compliance
 
 Security operations must often comply with internal policies, industry standards, and regulatory requirements. WarBunny incorporates governance-oriented features that support accountability and oversight.
 
-Governance capabilities include:
+# Governance capabilities include:
 
-Role-based access control
-Audit logging
-Activity tracking
-Approval workflows
-User accountability
-Administrative oversight
-Documentation management
-Evidence preservation
-Change tracking
-Policy alignment
+* Role-based access control
+ 
+* Audit logging
+ 
+* Activity tracking
+ 
+* Approval workflows
 
+* User accountability
+ 
+* Administrative oversight
+ 
+* Documentation management
+ 
+* Evidence preservation
+ 
+* Change tracking
+ 
+* Policy alignment
+ 
 These capabilities help organizations maintain transparency and support compliance initiatives.
+Scalability and Deployment Flexibility. WarBunny is designed to support organizations of varying sizes, from small educational environments to large enterprise security operations.
 
-Scalability and Deployment Flexibility
+# Deployment options may include:
 
-WarBunny is designed to support organizations of varying sizes, from small educational environments to large enterprise security operations.
+*Cloud-hosted environments
 
-Deployment options may include:
+* Private infrastructure deployments
 
-Cloud-hosted environments
-Private infrastructure deployments
-Hybrid deployments
-Development environments
-Training environments
-Research environments
-Enterprise integrations
-API connectivity
-Custom workflow extensions
-Multi-team support
+* Hybrid deployments
+ 
+* Development environments
+ 
+* Training environments
+
+* Research environments
+
+* Enterprise integrations
+
+* API connectivity
+
+* Custom workflow extensions
+
+* Multi-team support
 
 This flexibility allows organizations to deploy the platform in ways that align with operational requirements and security policies.
 
@@ -226,20 +262,29 @@ Effective cybersecurity requires teamwork. WarBunny places collaboration at the 
 
 # Benefits include
 
-Faster coordination
-Improved visibility
-Reduced tool switching
-Enhanced communication
-Better documentation
-Increased operational efficiency
-Stronger team alignment
-Improved situational awareness
-Streamlined reporting
-Consistent workflow execution
+* Faster coordination
+
+* Improved visibility
+ 
+* Reduced tool switching
+ 
+* Enhanced communication
+ 
+* Better documentation
+ 
+* Increased operational efficiency
+ 
+* Stronger team alignment
+ 
+* Improved situational awareness
+ 
+* Streamlined reporting
+ 
+* Consistent workflow execution
 
 The result is a more connected and effective security operation.
 
-Use Cases
+# Use Cases
 
 WarBunny can support a variety of cybersecurity use cases, including:
 
